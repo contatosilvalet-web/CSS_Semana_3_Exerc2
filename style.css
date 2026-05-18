@@ -1,3 +1,5 @@
+/* Estrutura */
+
 html {
     background-color: #c0d9fc;
     background-image: url("img.jpg");
@@ -23,38 +25,11 @@ main {
     width: 100%;
 }
 
-h1 {
-    color: #f7fbff;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    text-align: center;
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 1.4rem;
-    color: #011434;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    text-align: center;
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    background-color: #EF2464;
-}
-
 fieldset {
     border: 2px dashed #3d8af5;
     border-radius: 20px;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.3);
-}
-
-legend {
-    color: #011434;
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    padding: 0 10px;
 }
 
 ul {
@@ -63,52 +38,30 @@ ul {
     margin: 0;
 }
 
-.item-tecnologia {
-    background-color: #a2c3fc;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(179, 0, 80, 0.1);
+
+/* Agrupamento de seletores */
+
+h1,
+h2,
+.descricao-final {
     text-align: center;
+    color: #f7fbff;
 }
 
-.item-tecnologia h3::before {
-    margin-right: 16px;
-    font-size: 1.6rem;
-}
-
-.item-tecnologia h3 {
-    color: #011434;
+h1 {
+    color: #f7fbff;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
     font-family: "Fraunces", serif;
-    font-size: 1.6rem;
-    margin: 0 0 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 700;
 }
 
-.biotech h3::before {
-    content: "👩‍🔬​";
-}
-
-.bioinfo h3::before {
-    content: "👩‍💻";
-}
-
-.programacao h3::before {
-    content: "🐍​";
-}
-
-.bigdata h3::before {
-    content: "📊";
-}
-
-.ia h3::before {
-    content: "🤖";
-}
-
-.ml h3::before {
-    content: "🎯";
+h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
 }
 
 p {
@@ -120,11 +73,76 @@ p {
     font-family: "Jersey 10", sans-serif;
 }
 
+.item-tecnologia {
+    background-color: #a2c3fc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(179, 0, 80, 0.1);
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item-tecnologia:hover {
+    opacity: 0.65;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.item-tecnologia h3 {
+    color: #011434;
+    font-family: "Fraunces", serif;
+    font-size: 1.6rem;
+    margin: 0 0 10px 0;
+}
+
+
+/* Pseudo-elemento antes de cada tecnologia  */
+
+.item-tecnologia::before {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.biotech::before {
+    content: "👩‍🔬";
+}
+
+.bioinfo::before {
+    content: "👩‍💻";
+}
+
+.programacao::before {
+    content: "🐍";
+}
+
+.bigdata::before {
+    content: "📊";
+}
+
+.ia::before {
+    content: "🤖";
+}
+
+.ml::before {
+    content: "🎯";
+}
+
+.destaque {
+    border: 3px solid #f7fbff;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+
 .detalhe-texto {
     opacity: 0.75;
     font-size: 1.1rem;
 }
 
-.destaque {
-    border: 2px solid #c0d9fc;
+.descricao-final {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(1, 20, 52, 0.1);
+    border-radius: 10px;
+    font-family: "Fraunces", serif;
 }
